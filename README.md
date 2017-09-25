@@ -4,6 +4,8 @@
 
 Using Ruby on Rails, we'd like you to create a simple experts directory search tool. Start by forking this repo to a public one of your own.
 
+### _DO NOT USE SCAFFOLDING_
+
 ### Requirements
 
 The application should fulfill the following requirements:
