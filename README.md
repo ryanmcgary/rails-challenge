@@ -30,7 +30,7 @@ The application should fulfill the following requirements:
 
 * Results should show the path of introduction from Alan to the expert e.g. Alan wants to get introduced to someone who writes about 'Dog breeding'. Claudia's website has a heading tag "Dog breeding in Ukraine". Bart knows Alan and Claudia. An example search result would be Alan -> Bart -> Claudia ("Dog breeding in Ukraine").
 
-We encourage the use of gems and libraries for everything except the search functionality, in which we want to see your simple algorithm approach. We are looking for a simple, clean, elegant design, tests and all round understanding of the full stack e.g. Ruby, Rails, CSS (or SASS), HTML (or Slim), JavaScript (or CoffeeScript).
+We encourage the use of gems and libraries for everything except the search functionality, in which we want to see your simple algorithm approach. For the back-end engineers, the front-end just needs to be clean and usable. Do not spend the majority of your time there.
 
 ### Submission
 
