@@ -2,13 +2,13 @@
 
 ### Overview
 
-Using Ruby on Rails, we'd like you to create a simple experts directory search tool. 
+* Using Ruby on Rails, we'd like you to create a simple experts directory search tool. 
 
-We suggest starting out by forking this repo to a public one of your own. If you are concerned with the repo being public, this is not required.
+* We suggest starting out by forking this repo to a public one of your own. If you are concerned with the repo being public, this is not required.
 
-Spend, at max, 4 hours on this project.
+* Spend, at max, 4 hours on this project.
 
-### _DO NOT USE SCAFFOLDING_
+* DO NOT USE SCAFFOLDING
 
 ### Requirements
 
