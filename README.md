@@ -2,13 +2,19 @@
 
 ### Overview
 
-Using Ruby on Rails, we'd like you to create a simple experts directory search tool. Start by forking this repo to a public one of your own.
+Using Ruby on Rails, we'd like you to create a simple experts directory search tool. 
+
+We suggest starting out by forking this repo to a public one of your own. If you are concerned with the repo being public, this is not required.
+
+Spend, at max, 4 hours on this project.
 
 ### _DO NOT USE SCAFFOLDING_
 
 ### Requirements
 
 The application should fulfill the following requirements:
+
+*
 
 * I enter a name and a personal website address and a member is created.
 
@@ -25,10 +31,6 @@ The application should fulfill the following requirements:
 * Now, looking at Alan's profile, I want to find experts in the application who write about a certain topic and are not already friends of Alan.
 
 * Results should show the path of introduction from Alan to the expert e.g. Alan wants to get introduced to someone who writes about 'Dog breeding'. Claudia's website has a heading tag "Dog breeding in Ukraine". Bart knows Alan and Claudia. An example search result would be Alan -> Bart -> Claudia ("Dog breeding in Ukraine").
-
-* Optional: prefering h1 over h2 and shorter introduction paths when ordering results.
-
-* Bonus points for not using Twitter Bootstrap or any other CSS framework (We want to see how you structure your CSS).
 
 We encourage the use of gems and libraries for everything except the search functionality, in which we want to see your simple algorithm approach. We are looking for a simple, clean, elegant design, tests and all round understanding of the full stack e.g. Ruby, Rails, CSS (or SASS), HTML (or Slim), JavaScript (or CoffeeScript).
 
