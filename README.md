@@ -14,8 +14,6 @@ Spend, at max, 4 hours on this project.
 
 The application should fulfill the following requirements:
 
-*
-
 * I enter a name and a personal website address and a member is created.
 
 * When a member is created, all the heading (h1-h3) values are pulled in from the website to that members profile.
