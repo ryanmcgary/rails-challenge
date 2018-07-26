@@ -22,7 +22,7 @@ The application should fulfill the following requirements:
 
 * After the member has been added, I can define their friendships with other existing members. Friendships are bi-directional i.e. If David is a friend of Oliver, Oliver is always a friend of David as well.
 
-* The interface should list all members with their name, short url and the number of friends e.g. Alan [http://goo.gl/3io1P](http://goo.gl/3io1P).
+* The interface should list all members with their name, short url and the number of friends.
 
 * Viewing an actual member should display the name, website URL, shortening, website headings, and links to their friends' pages.
 
