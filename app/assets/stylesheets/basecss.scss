@@ -1,3 +1,4 @@
+*{box-sizing: border-box;}
 body {
   background-color: #fff;
   color: #333;
@@ -6,7 +7,12 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
-
+input, select{
+  width: 300px;
+}
+i,small{
+  display: block;
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;

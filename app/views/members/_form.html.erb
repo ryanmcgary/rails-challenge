@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :url %>
-    <%= form.text_field :url %>
+    <%= form.text_field :url, placeholder: "Must be full url: https://www.everlywell.com/"%>
   </div>
 
   <% if params[:id] %>  
@@ -64,10 +64,6 @@
         });
       });
     </script>
-    <style>
-      small {display: block;}
-      i {display: block;}
-    </style>
   <% end %>
 
   <div class="actions">
