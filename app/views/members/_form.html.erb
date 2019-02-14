@@ -1,0 +1,76 @@
+<%= form_with(model: member, local: true) do |form| %>
+  <% if member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <% if params[:id] %>  
+    <div class="field">
+      <%= form.select :friend_ids, options_for_select(Member.distinct.pluck(:name, :id), @member.friends.pluck(:id)), {:include_blank => 'No Friends'}, { multiple: true } %>
+    </div>
+
+    <div class="field">
+      <div class="search">
+        <input id="header-search" type="text" name="name" value="" placeholder="search" autocomplete="off">
+        <ul id="header-search-results"></ul>
+      </div>
+    </div>
+    <script>
+      $(document).on('keyup', '#header-search', function(e) {
+        e.preventDefault();
+        if ( e.which === 40 || e.which === 38) return;
+        $.ajax({
+          url: '/header_search',
+          type: 'GET',
+          data: {
+            q: e.target.value,
+            id: <%= @member.id %>
+          },
+          error: function() {
+            callback();
+          },
+          success: function(res) {
+            r = res.sort(function(a, b){
+              if(a.type < b.type) { return -1; }
+              if(a.type > b.type) { return 1; }
+              return 0;
+            }).map(function(elem, i) {
+                var headers = elem.headers.map(function(elem, index) {
+                  var elemNew = elem.replace(e.target.value, `<b>${e.target.value}</b>`)
+                  return `<small>${elemNew}</small>`;
+                }).join('')
+                return `<li class="e${i}"><a href="${elem.url}">${elem.name}</a><i>${elem.paths}</i>${headers}</li>`;
+            })
+            $("#header-search-results").html(r);
+            console.log(res);
+          }
+        });
+      });
+    </script>
+    <style>
+      small {display: block;}
+      i {display: block;}
+    </style>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
