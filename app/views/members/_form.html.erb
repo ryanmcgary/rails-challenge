@@ -24,7 +24,25 @@
   <% if params[:id] %>  
     <div class="field">
       <%= form.select :friend_ids, options_for_select(Member.distinct.pluck(:name, :id), @member.friends.pluck(:id)), {:include_blank => 'No Friends'}, { multiple: true } %>
-    </div>
+    </div>    
+    <script>
+      $("#member_friend_ids").selectize({
+        valueField: 'id',
+        labelField: 'name',
+        searchField: 'name',
+        options: <%= raw(@member.friends.to_json) %>,//[{id: 1, name: "bob"}, {id: 2, name: "sport"}],
+        items: <%= raw(@member.friend_ids.to_json) %>,//[{id: 1, name: "bob"}, {id: 2, name: "sport"}],
+        create: false,
+        render: {
+          item(item, escape) {
+            return `<div class='tag-item'><span>${escape(item.name)}</span></div>`;
+          },
+          option(item, escape) {
+            return `<div class='tag-item'><span>${escape(item.name)}</span></div>`;
+          }
+        }         
+      })
+    </script>
 
     <div class="field">
       <div class="search">
