@@ -1,5 +1,8 @@
 {
   "name": "rails-challenge",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "selectize": "^0.12.6"
+  }
 }

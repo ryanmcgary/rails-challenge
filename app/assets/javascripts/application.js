@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery/dist/jquery.min.js
+//= require selectize/dist/js/standalone/selectize.min.js
+
+
+
